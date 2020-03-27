@@ -1,2 +1,2 @@
 test_usu.py filter=git-crypt diff=git-crypt
-mqtt.py filter=git-crypt diff=git-crypt
+mqtt_usu.py filter=git-crypt diff=git-crypt
