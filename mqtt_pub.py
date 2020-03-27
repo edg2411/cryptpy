@@ -1,5 +1,6 @@
 import paho.mqtt.client as mqttClient
 import time
+from mqtt_usu import usu
  
 def on_connect(client, userdata, flags, rc):
  
@@ -16,10 +17,10 @@ def on_connect(client, userdata, flags, rc):
  
 Connected = False   #global variable for the state of the connection
  
-broker_address= "farmer.cloudmqtt.com"  #Broker address
-port = 	14766                         #Broker port
-user = "xdfykvhs"                    #Connection username
-password = "QHxSy31yCzz-"            #Connection password
+broker_address  = usu['broker_address'] #Broker address
+port            = usu['port']           #Broker port
+user            = usu['user']           #Connection username
+password        = usu['password']       #Connection password
  
 client = mqttClient.Client("Python")               #create new instance
 client.username_pw_set(user, password=password)    #set username and password
